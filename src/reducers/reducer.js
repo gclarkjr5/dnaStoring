@@ -5,12 +5,12 @@ export default (state = {}, action) => {
     case 'STRING_INPUT_CHANGE':
       return {
         ...state,
-        string: action.payload
+        stringValue: action.payload
       }
     case 'DNA_INPUT_CHANGE':
       return {
         ...state,
-        dna: action.payload
+        dnaValue: action.payload
       }
     case 'STRING_TRANSLATE_SUCCESS':
       return {
@@ -21,6 +21,11 @@ export default (state = {}, action) => {
       return {
         ...state,
         string: action.payload
+      }
+    case 'DNA_TYPE_CHANGE':
+      return {
+        ...state,
+        DNARNA: action.payload
       }
 
     default:

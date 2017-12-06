@@ -34,3 +34,10 @@ export const dnatranslate = input => dispatch => {
             dispatch({type: 'DNA_TRANSLATE_ERROR', err: err})
         })
 }
+
+export const newType = val => {
+    return {
+        type: 'DNA_TYPE_CHANGE',
+        payload: val
+    }
+}

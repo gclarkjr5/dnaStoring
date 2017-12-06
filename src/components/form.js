@@ -6,11 +6,11 @@ class Form extends Component {
     render() {
         const handleStringSubmit = e => {
             e.preventDefault();
-            this.props.stringtranslate(this.props.string)
+            this.props.stringtranslate(this.props.stringValue)
         }
         const handleDNASubmit = e => {
             e.preventDefault();
-            this.props.dnatranslate(this.props.dna)
+            this.props.dnatranslate(this.props.dnaValue)
         }
 
         const handleStringChange = event => {
@@ -21,23 +21,31 @@ class Form extends Component {
         }
 
         return (
-            <div style={{left: '0'}}>
+            <div>
                 <form onSubmit={handleStringSubmit}>
                     <label>
                         String:
-                    <input type="text" name="name" value={this.props.string} onChange={handleStringChange} />
+                    <input type="text" name="name" value={this.props.stringValue} onChange={handleStringChange} />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
                 <br />
+                <div>{this.props.dna}</div>
+                <br />
                 <form onSubmit={handleDNASubmit}>
                     <label>
-                        <Selector />
-                    <input type="text" name="name" value={this.props.dna} onChange={handleDNAChange} />
+                        <div style={{textAlign: 'center'}}>
+                            <Selector style={{ text: 'center' }} 
+                                DNARNA={this.props.DNARNA}
+                                newType={this.props.newType}
+                            />
+                        </div>
+                        <input type="text" name="name" value={this.props.dnaValue} onChange={handleDNAChange} />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
-                {/* <div>{this.props.translation}</div> */}
+                <br />
+                <div>{this.props.string}</div>
             </div>
         )
     }

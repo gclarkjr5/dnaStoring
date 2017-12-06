@@ -12,6 +12,7 @@ class Container extends Component {
         this.handleDNAChange = this.handleDNAChange.bind(this)
         this.stringtranslate = this.stringtranslate.bind(this)
         this.dnatranslate = this.dnatranslate.bind(this)
+        this.newType = this.newType.bind(this)
     }
 
     handleStringChange = input => {
@@ -27,17 +28,24 @@ class Container extends Component {
     dnatranslate = input => {
         this.props.action.dnatranslate(input);
     }
+    newType = val => {
+        this.props.action.newType(val)
+    }
 
     render() {
-        const {dna, string} = this.props.data.app;
+        const {dnaValue, stringValue, dna, string, DNARNA} = this.props.data.app;
         return (
             <Form
                 stringtranslate={this.stringtranslate}
                 dnatranslate={this.dnatranslate}
+                stringValue={stringValue}
                 string={string}
                 dna={dna}
+                dnaValue={dnaValue}
                 handleStringChange={this.handleStringChange}
                 handleDNAChange={this.handleDNAChange}
+                DNARNA={DNARNA}
+                newType={this.newType}
             />
         )
     }

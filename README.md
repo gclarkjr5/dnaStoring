@@ -7,6 +7,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 The folder structures is as follows:
+```
 my app/
     Readme.md
     node_modules/
@@ -46,3 +47,4 @@ my app/
     app.js
     package-lock.json
     yarn.lock
+```
