@@ -1,7 +1,7 @@
 `use strict`
 
 // import key
-const key = require('./key/key');
+const key = require('../key/key');
 
 
 // accept the string that a user posts

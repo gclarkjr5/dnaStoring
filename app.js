@@ -1,7 +1,6 @@
 `use strict`
 
 // Express boilerplate
-
 const express = require('express');
 const app = express();
 

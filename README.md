@@ -1,12 +1,12 @@
-# DNA/String conversion
+# DNA storing
 
-1. Clone this repo using git clone [url]
+1. Clone this repo using git clone "https://github.com/gclarkjr5/dnaStoring.git"
 2. install dependencies using "npm install"
 3. Run "npm start" from the root of this repo
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-The folder structures is as follows:
+The folder structure is as follows:
 ```
 my app/
     Readme.md
@@ -20,8 +20,10 @@ my app/
             ascii.js
             dna.js
             key.js
+        transformers/
+            transform.js
+            transformDNA.js
         index.js
-        interpret.js
     src/
         actions/
             actions.js
@@ -49,4 +51,4 @@ my app/
     yarn.lock
 ```
 
-Feel free to change the option between DNA and RNA.
+Switch between the DNA and RNA options to see the differences.
