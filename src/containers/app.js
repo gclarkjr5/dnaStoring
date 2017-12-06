@@ -22,18 +22,18 @@ class Container extends Component {
         this.props.action.handleDNAChange(input)
     }
 
-    stringtranslate = input => {
-        this.props.action.stringtranslate(input);
+    stringtranslate = (input, type) => {
+        this.props.action.stringtranslate(input, type);
     }
-    dnatranslate = input => {
-        this.props.action.dnatranslate(input);
+    dnatranslate = (input, type) => {
+        this.props.action.dnatranslate(input, type);
     }
-    newType = val => {
+    newType = (val) => {
         this.props.action.newType(val)
     }
 
     render() {
-        const {dnaValue, stringValue, dna, string, DNARNA} = this.props.data.app;
+        const { dnaValue, stringValue, dna, string, DNARNA } = this.props.data.app;
         return (
             <Form
                 stringtranslate={this.stringtranslate}

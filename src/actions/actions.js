@@ -13,9 +13,10 @@ export const handleDNAChange = input => {
     }
 }
 
-export const stringtranslate = input => dispatch => {
+export const stringtranslate = (input, type) => dispatch => {
+    console.log(input, type)
     dispatch({type: 'STRING_TRANSLATE', payload: {}})
-    axios.post('/string', {input: input})
+    axios.post('/string', {input: input, type: type})
         .then(res => {
             dispatch({type: 'STRING_TRANSLATE_SUCCESS', payload: res.data})
         })
@@ -24,9 +25,9 @@ export const stringtranslate = input => dispatch => {
         })
 }
 
-export const dnatranslate = input => dispatch => {
+export const dnatranslate = (input, type) => dispatch => {
     dispatch({type: 'DNA_TRANSLATE', payload: {}})
-    axios.post('/dna', {input: input})
+    axios.post('/dna', {input: input, type: type})
         .then(res => {
             dispatch({type: 'DNA_TRANSLATE_SUCCESS', payload: res.data})
         })

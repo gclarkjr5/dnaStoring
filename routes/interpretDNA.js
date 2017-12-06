@@ -5,20 +5,21 @@ const key = require('./key/key');
 
 
 // accept the dna that a user posts
-const inputCodes = (str) => {
+const inputCodes = (str, type) => {
+    // if the input is not DNA then it must be RNA, change all U's to A's for key to recognize
+    if(type.value !== "DNA") {
+        str = str.replace(/U/g, "A") // replace U's with A's
+        const splits = str.match(/.{4}/g)
+        return splits
+    } 
     // Split dna up into splits after every 4 characters
     const splits = str.match(/.{4}/g)
     return splits
-    // Transform each character into its ascii equivalent
-    // const codes = split.map(x => {
-    //     return x.charCodeAt(0)
-    // })
-    // return codes
 }
 
 // take the dnas and find the relative characters in the key
-const interpret = str => {
-    const dnas = inputCodes(str)
+const interpret = (str, type) => {
+    const dnas = inputCodes(str, type)
     const string = [];
     // find the value and return the relevant key
     const change = dnas.map(x => {

@@ -12,12 +12,12 @@ router.use(bodyParser.json());
 // Interpret the string a user posts to its DNA code equivalent
 router.route('/string')
     .post((req, res) => {
-        const codes = interpret(req.body.input);
+        const codes = interpret(req.body.input, req.body.type);
         res.json(codes)
     })
 router.route('/dna')
     .post((req, res) => {
-        const string = interpretDNA(req.body.input);
+        const string = interpretDNA(req.body.input, req.body.type);
         res.json(string)
     })
 

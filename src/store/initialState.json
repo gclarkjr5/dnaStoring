@@ -2,6 +2,6 @@
     "app": {
         "stringValue": "",
         "dnaValue": "",
-        "DNARNA": "DNA"
+        "DNARNA": {"value": "DNA", "label": "DNA"}
     }
 }

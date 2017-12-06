@@ -6,11 +6,11 @@ class Form extends Component {
     render() {
         const handleStringSubmit = e => {
             e.preventDefault();
-            this.props.stringtranslate(this.props.stringValue)
+            this.props.stringtranslate(this.props.stringValue, this.props.DNARNA)
         }
         const handleDNASubmit = e => {
-            e.preventDefault();
-            this.props.dnatranslate(this.props.dnaValue)
+            e.preventDefault();            
+            this.props.dnatranslate(this.props.dnaValue, this.props.DNARNA)
         }
 
         const handleStringChange = event => {

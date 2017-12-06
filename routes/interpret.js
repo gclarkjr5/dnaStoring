@@ -16,14 +16,20 @@ const inputCodes = (str) => {
 }
 
 // take the codes and find the relative DNA combo in the key
-const interpret = str => {
+const interpret = (str, type) => {
     const codes = inputCodes(str)
     // console.log(codes)
     const change = codes.map(x => {
         return key[x]
     })
     // get the joined string of the combination of DNA combos
-    return change.join("");
+    const code = change.join("");
+    
+    // if its DNA convert return it
+    if(type.value === "DNA") {
+        return code
+    } // else change to RNA: RNA is like DNA but the A is now a U
+    return code.replace(/A/g, "U");
 }
 
 module.exports = interpret;

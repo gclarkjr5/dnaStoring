@@ -22,7 +22,7 @@ class Selector extends Component {
 
         return (
             <Select
-                value={this.props.DNARNA}
+                value={this.props.DNARNA.value}
                 options={options}
                 onChange={valueChange}
                 style={{width: '200px'}}
