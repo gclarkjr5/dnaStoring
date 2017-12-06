@@ -48,3 +48,5 @@ my app/
     package-lock.json
     yarn.lock
 ```
+
+Feel free to change the option between DNA and RNA.
