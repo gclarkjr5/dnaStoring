@@ -9,7 +9,7 @@ class Form extends Component {
             this.props.stringtranslate(this.props.stringValue, this.props.DNARNA)
         }
         const handleDNASubmit = e => {
-            e.preventDefault();            
+            e.preventDefault();
             this.props.dnatranslate(this.props.dnaValue, this.props.DNARNA)
         }
 
@@ -22,6 +22,13 @@ class Form extends Component {
 
         return (
             <div>
+                <br />
+                <Selector style={{ text: 'center' }}
+                    DNARNA={this.props.DNARNA}
+                    newType={this.props.newType}
+                />
+                <br />
+                <br />
                 <form onSubmit={handleStringSubmit}>
                     <label>
                         String:
@@ -32,14 +39,10 @@ class Form extends Component {
                 <br />
                 <div>{this.props.dna}</div>
                 <br />
+                <br />
                 <form onSubmit={handleDNASubmit}>
                     <label>
-                        <div style={{textAlign: 'center'}}>
-                            <Selector style={{ text: 'center' }} 
-                                DNARNA={this.props.DNARNA}
-                                newType={this.props.newType}
-                            />
-                        </div>
+                        DNA/RNA:
                         <input type="text" name="name" value={this.props.dnaValue} onChange={handleDNAChange} />
                     </label>
                     <input type="submit" value="Submit" />

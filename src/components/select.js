@@ -25,7 +25,6 @@ class Selector extends Component {
                 value={this.props.DNARNA.value}
                 options={options}
                 onChange={valueChange}
-                style={{width: '200px'}}
             />
         )
     }
